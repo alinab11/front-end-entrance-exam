@@ -2,57 +2,86 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Резюме</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Резюме Ивана Иванова</title>
+  <!-- Подключаем Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Подключаем Font Awesome для иконок -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Подключаем CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main id="resume">
-    <section class="header">
-      <div class="photo"></div>
-      <div class="info">
-        <h1 id="name" contenteditable="true">Иван Иванов</h1>
-        <h2 id="position" contenteditable="true">Frontend-разработчик</h2>
-      </div>
-    </section>
-    <section class="contacts">
-      <h3>Контакты</h3>
-      <ul>
-        <li id="email" contenteditable="true">ivan@example.com</li>
-        <li id="phone" contenteditable="true">+7 999 123 4567</li>
-        <li id="linkedin" contenteditable="true">linkedin.com/in/ivan</li>
+  <div class="container">
+    <!-- Боковая панель -->
+    <aside class="sidebar">
+      <img src="profile.jpg" alt="Фото профиля" class="profile-pic">
+      <h2>Контакты</h2>
+      <ul class="contact-list">
+        <li><i class="fas fa-phone"></i> +7 (999) 123-45-67</li>
+        <li><i class="fas fa-envelope"></i> ivanov@example.com</li>
+        <li><i class="fas fa-map-marker-alt"></i> Москва, Россия</li>
       </ul>
-    </section>
-    <section class="about">
-      <h3>О себе</h3>
-      <p id="summary" contenteditable="true">Я веб-разработчик с опытом создания адаптивных интерфейсов...</p>
-    </section>
-    <section class="experience">
-      <h3>Опыт работы</h3>
-      <div class="job" contenteditable="true">
-        <strong>Frontend Developer — ООО "Техно"</strong><br>
-        <small>2021 — настоящее время</small>
-        <p>Разработка SPA, оптимизация UI/UX, работа с командой дизайнеров.</p>
-      </div>
-    </section>
-    <section class="education">
-      <h3>Образование</h3>
-      <div class="edu" contenteditable="true">
-        <strong>МГТУ им. Баумана</strong><br>
-        <small>Бакалавр | Прикладная информатика | 2017 — 2021</small>
-      </div>
-    </section>
-    <section class="skills">
-      <h3>Навыки</h3>
-      <ul contenteditable="true">
-        <li>HTML, CSS, JavaScript</li>
-        <li>React, Git</li>
-        <li>БЭМ, Адаптивная верстка</li>
+      <h2>Навыки</h2>
+      <ul class="skills-list">
+        <li>HTML / CSS – продвинутый уровень</li>
+        <li>JavaScript – средний уровень</li>
+        <li>React – базовый уровень</li>
       </ul>
-    </section>
-    <button id="downloadBtn" class="ripple">Скачать PDF</button>
-  </main>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
-  <script src="script.js"></script>
+      <h2>Социальные сети</h2>
+      <p class="social-links">
+        <a href="#"><i class="fab fa-github"></i> GitHub</a>
+        <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      </p>
+    </aside>
+
+    <!-- Основное содержимое -->
+    <main class="main-content">
+      <header>
+        <h1>Иван Иванов</h1>
+        <h3>Веб-разработчик</h3>
+        <p>Опытный веб-разработчик с 5-летним стажем. Увлечен созданием современных интерфейсов и веб-приложений. Стремлюсь к постоянному совершенствованию навыков и изучению новых технологий.</p>
+      </header>
+
+      <section id="experience">
+        <h2>Опыт работы</h2>
+        <article class="job">
+          <h3>Frontend-разработчик – Компания А</h3>
+          <p><strong>Даты:</strong> 2021 – настоящее время</p>
+          <ul>
+            <li>Разработка одностраничного приложения на React.</li>
+            <li>Интеграция REST API и работа с базами данных.</li>
+            <li>Оптимизация производительности и кроссбраузерная адаптивность.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <h3>Веб-разработчик – Компания Б</h3>
+          <p><strong>Даты:</strong> 2018 – 2021</p>
+          <ul>
+            <li>Верстка макетов по дизайну Figma.</li>
+            <li>Добавление интерактивности на JavaScript.</li>
+            <li>Поддержка и обновление сайтов клиентов.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="education">
+        <h2>Образование</h2>
+        <article class="job">
+          <h3>Бакалавр компьютерных наук – Университет ИКТ</h3>
+          <p><strong>Годы обучения:</strong> 2014 – 2018</p>
+          <ul>
+            <li>Специальность «Прикладная информатика».</li>
+            <li>Выпускной проект: «Веб-приложение для учета задач».</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <!-- (Опционально) Небольшой скрипт для примера: -->
+  <!-- <script>
+    // Здесь можно добавить JS-код для интерактивности, если нужно
+  </script> -->
 </body>
 </html>
