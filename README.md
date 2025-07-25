@@ -24,4 +24,4 @@
 
 1. Клонируй или скачай проект:
 ```bash
-git clone https://github.com/yourusername/your-repo-name.git
+git clone https://github.com/alinab11/front-end-entrance-exam.git
